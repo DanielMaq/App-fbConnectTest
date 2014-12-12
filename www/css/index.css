@@ -51,8 +51,8 @@ body {
     position:absolute;             /* position in the center of the screen */
     left:50%;
     top:50%;
-    height:50px;                   /* text area height */
-    width:225px;                   /* text area width */
+    /*height:50px;                   *//* text area height */
+    width:400px;                   /* text area width */
     text-align:center;
     padding:180px 0px 0px 0px;     /* image height is 200px (bottom 20px are overlapped with text) */
     margin:-115px 0px 0px -112px;  /* offset vertical: half of image height and text area height */
@@ -112,4 +112,13 @@ h1 {
 .blink {
     animation:fade 3000ms infinite;
     -webkit-animation:fade 3000ms infinite;
+}
+.fbCheckBtn{
+    background: none no-repeat scroll 0 0 #f00;
+    color: #f00;
+    cursor: pointer;
+    display: block;
+    font-size: 25px;
+    font-weight: bold;
+    width: 100%;
 }
