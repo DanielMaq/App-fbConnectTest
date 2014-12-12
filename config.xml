@@ -8,9 +8,9 @@
 
     <author email="John@doeCorp.org">John Doe</author>
 
-    <gap:plugin name="com.phonegap.plugins.facebookconnect" version="<VERSION>">
-        <param name="APP_ID" value="<YOUR_APP_ID>" />
-        <param name="APP_NAME" value="<YOUR_APP_NAME>" />
+    <gap:plugin name="com.phonegap.plugins.facebookconnect">
+        <param name="APP_ID" value="155950717802259" />
+        <param name="APP_NAME" value="fbconnect" />
     </gap:plugin>
 
     <content src="index.html" />
