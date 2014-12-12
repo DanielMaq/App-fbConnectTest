@@ -28,41 +28,17 @@
         <title>Hello World</title>
     </head>
     <body>
-
-    <style type="text/css">
-
-    </style>
-
         <div class="app">
             <h1>Apache Cordova</h1>
             <div id="deviceready" class="blink">
                 <p class="event listening">Connecting to Device</p>
                 <p class="event received">Device is Ready</p>
             </div>
-            <p class="fbCheckBtn">Check Fb Status</p>
         </div>
         <script type="text/javascript" src="cordova.js"></script>
-        <script type="text/javascript" src="js/jquery-2.1.0.min.js"></script>
         <script type="text/javascript" src="js/index.js"></script>
 
         <script>
-
-            $(document).ready(function(){
-
-                $('.fbCheckBtn').on('click', function(){
-                    FB.getLoginStatus(function(response) {
-                        if (response.status === 'connected') {
-                            alert('Logged in.');
-                        }
-                        else {
-                            alert('Not Logged in.');
-//                            FB.login();
-                        }
-                    });
-                })
-
-            });
-
             window.fbAsyncInit = function() {
                 FB.init({
                     appId      : '155950717802259',

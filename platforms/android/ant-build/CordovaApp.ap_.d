@@ -38,4 +38,5 @@ f:\wamp\www\_github\App-fbConnectTest\platforms\android\assets\www\js \
 f:\wamp\www\_github\App-fbConnectTest\platforms\android\assets\www\css\index.css \
 f:\wamp\www\_github\App-fbConnectTest\platforms\android\assets\www\img\logo.png \
 f:\wamp\www\_github\App-fbConnectTest\platforms\android\assets\www\js\index.js \
+f:\wamp\www\_github\App-fbConnectTest\platforms\android\assets\www\js\jquery-2.1.0.min.js \
 f:\wamp\www\_github\App-fbConnectTest\platforms\android\ant-build\AndroidManifest.xml \
