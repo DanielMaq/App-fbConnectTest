@@ -59,12 +59,13 @@
                         alert(theR);
                         alert(uID);
                         showEmail(uID);
-                        alert('listo');
+                        alert('listoaa');
                     },
                     function (response) {
                         var theR = JSON.stringify(response);
                         alert(theR);
                         $('#respuesta').text(theR);
+                        alert('listobb');
                     });
             }
 
@@ -73,8 +74,10 @@
                     if (!response || response.error) {
                         alert('Error occured');
                         alert(response.error);
+                        alert('listo22');
                     } else {
                         $('#respuesta').text(response);
+                        alert('listo33');
                     }
                 });
             }
