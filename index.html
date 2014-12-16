@@ -54,6 +54,8 @@
                 facebookConnectPlugin.login( ["email"], 
                     function (response) {
                         var theR = JSON.stringify(response);
+                        alert(response);
+                        alert(response.authResponse);
                         alert(theR);
                         document.getElementById('#respuesta').innerHTML(theR);
                     },
