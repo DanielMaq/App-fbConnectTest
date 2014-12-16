@@ -56,13 +56,14 @@
                     function (response) {
                         var theR = JSON.stringify(response);
                         alert(JSON.stringify(response.authResponse));
+                        alert(JSON.stringify(response.email));
                         alert(theR);
-                        $('#respuesta').innerHTML(theR);
+                        $('#respuesta').text(theR);
                     },
                     function (response) {
                         var theR = JSON.stringify(response);
                         alert(theR);
-                        document.getElementById('#respuesta').innerHTML(theR);
+                        $('#respuesta').text(theR);
                     });
             }
             
