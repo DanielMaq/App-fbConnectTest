@@ -52,13 +52,15 @@
                     var appId = prompt("Enter FB Application ID", "");
                     facebookConnectPlugin.browserInit(appId);
                 }
-                facebookConnectPlugin.login( ["public_profile", "email"],
+                facebookConnectPlugin.login( ["email"],
                     function (response) {
                         var theR = JSON.stringify(response);
-                        alert(JSON.stringify(response.authResponse));
-                        alert(JSON.stringify(response.email));
+                        var uID = '/'+response.authResponse.userID;
                         alert(theR);
-                        $('#respuesta').text(theR);
+                        alert(uID);
+                        facebookConnectPlugin.api(uID, function(response) {
+                            $('#respuesta').text(response);
+                        });
                     },
                     function (response) {
                         var theR = JSON.stringify(response);
