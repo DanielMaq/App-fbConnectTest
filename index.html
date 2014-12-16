@@ -45,6 +45,7 @@
         <div id="fb-root"></div>
         <script type="text/javascript" src="cordova.js"></script>
         <script type="text/javascript" src="js/facebookConnectPlugin.js"></script>
+        <script type="text/javascript" src="js/jquery-2.1.0.min.js"></script>
         <script type="text/javascript">
             var login = function () {
                 if (!window.cordova) {
@@ -54,10 +55,9 @@
                 facebookConnectPlugin.login( ["email"], 
                     function (response) {
                         var theR = JSON.stringify(response);
-                        alert(response);
-                        alert(response.authResponse);
+                        alert(JSON.stringify(response.authResponse));
                         alert(theR);
-                        document.getElementById('#respuesta').innerHTML(theR);
+                        $('#respuesta').innerHTML(theR);
                     },
                     function (response) {
                         var theR = JSON.stringify(response);
