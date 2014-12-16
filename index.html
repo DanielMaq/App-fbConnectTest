@@ -58,20 +58,25 @@
                         var uID = '/'+response.authResponse.userID;
                         alert(theR);
                         alert(uID);
-                        facebookConnectPlugin.api(uID, function(response) {
-                            if (!response || response.error) {
-                                alert('Error occured');
-                                alert(response.error);
-                            } else {
-                                $('#respuesta').text(response);
-                            }
-                        });
+                        showEmail(uID);
+                        alert('listo');
                     },
                     function (response) {
                         var theR = JSON.stringify(response);
                         alert(theR);
                         $('#respuesta').text(theR);
                     });
+            }
+
+            function showEmail(uID){
+                facebookConnectPlugin.api(uID, function(response) {
+                    if (!response || response.error) {
+                        alert('Error occured');
+                        alert(response.error);
+                    } else {
+                        $('#respuesta').text(response);
+                    }
+                });
             }
             
             var showDialog = function () { 
