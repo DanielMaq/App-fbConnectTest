@@ -59,7 +59,12 @@
                         alert(theR);
                         alert(uID);
                         facebookConnectPlugin.api(uID, function(response) {
-                            $('#respuesta').text(response);
+                            if (!response || response.error) {
+                                alert('Error occured');
+                                alert(response.error);
+                            } else {
+                                $('#respuesta').text(response);
+                            }
                         });
                     },
                     function (response) {
