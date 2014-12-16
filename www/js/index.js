@@ -31,23 +31,9 @@ var app = {
     // deviceready Event Handler
     //
     // The scope of 'this' is the event. In order to call the 'receivedEvent'
-    // function, we must explicitly call 'app.receivedEvent(...);'
+    // function, we must explicity call 'app.receivedEvent(...);'
     onDeviceReady: function() {
         app.receivedEvent('deviceready');
-
-        var fbLoginSuccess = function (userData) {
-            alert("UserInfo: " + JSON.stringify(userData));
-            facebookConnectPlugin.getAccessToken(function(token) {
-                alert("Token: " + token);
-            }, function(err) {
-                alert("Could not get access token: " + err);
-            });
-        };
-        facebookConnectPlugin.login(["public_profile"],
-            fbLoginSuccess,
-            function (error) { alert(error) }
-        );
-
     },
     // Update DOM on a Received Event
     receivedEvent: function(id) {
@@ -61,5 +47,3 @@ var app = {
         console.log('Received Event: ' + id);
     }
 };
-
-app.initialize();
