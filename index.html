@@ -39,6 +39,8 @@
             <div class="event listening button" onclick="getAccessToken();">Get access token with Facebook</div>
             <div class="event listening button" onclick="getStatus();">Get login status with Facebook</div>
             <div class="event listening button" onclick="logout();">Logout with Facebook</div>
+            <div id="respuesta" style="border:1px solid red; margin: 40px 0 0;">Aca te viene la respuesta.</div>
+
         </div>
         <div id="fb-root"></div>
         <script type="text/javascript" src="cordova.js"></script>
@@ -50,8 +52,16 @@
                     facebookConnectPlugin.browserInit(appId);
                 }
                 facebookConnectPlugin.login( ["email"], 
-                    function (response) { alert(JSON.stringify(response)) },
-                    function (response) { alert(JSON.stringify(response)) });
+                    function (response) {
+                        var theR = JSON.stringify(response);
+                        alert(theR);
+                        document.getElementById('#respuesta').innerHTML(theR);
+                    },
+                    function (response) {
+                        var theR = JSON.stringify(response);
+                        alert(theR);
+                        document.getElementById('#respuesta').innerHTML(theR);
+                    });
             }
             
             var showDialog = function () { 
