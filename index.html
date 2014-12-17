@@ -71,19 +71,9 @@
             }
 
             function showEmail(){
-//                var uID = $('#userID').text();
-//                alert('show Email: ' + uID);
-                alert('show Email');
-                facebookConnectPlugin.api('/me?scope=email', function(response) {
-                    if (!response || response.error) {
-                        alert('Error occured');
-                        alert(response.error);
-                        $('#respuesta').text(response.error);
-                    } else {
-                        alert(JSON.stringify(response));
-                        $('#respuesta').text(response);
-                    }
-                });
+                facebookConnectPlugin.api( "me/?fields=email", ["email"],
+                function (response) { alert(JSON.stringify(response.email)) },
+                function (response) { alert(JSON.stringify(response)) });
             }
             
             var showDialog = function () { 
