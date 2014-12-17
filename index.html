@@ -71,9 +71,10 @@
             }
 
             function showEmail(){
-                var uID = $('#userID').text();
-                alert('show Email: ' + uID);
-                facebookConnectPlugin.api(uID, function(response) {
+//                var uID = $('#userID').text();
+//                alert('show Email: ' + uID);
+                alert('show Email');
+                facebookConnectPlugin.api('/me?scope=email', function(response) {
                     if (!response || response.error) {
                         alert('Error occured');
                         alert(response.error);
