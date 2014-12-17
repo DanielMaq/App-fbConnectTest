@@ -40,6 +40,7 @@
             <div class="event listening button" onclick="getAccessToken();">Get access token with Facebook</div>
             <div class="event listening button" onclick="getStatus();">Get login status with Facebook</div>
             <div class="event listening button" onclick="logout();">Logout with Facebook</div>
+            <div id="userID" style="border:1px solid green; margin: 40px 0 0;">Aca te viene el ID.</div>
             <div id="respuesta" style="border:1px solid red; margin: 40px 0 0;">Aca te viene la respuesta.</div>
 
         </div>
@@ -59,6 +60,7 @@
                         var uID = '/'+response.authResponse.userID;
                         alert(theR);
                         alert(uID);
+                        $('#userID').text(uID);
                         $('#respuesta').text(theR + ' -- El ID: ' +uID);
                     },
                     function (response) {
@@ -69,12 +71,15 @@
             }
 
             function showEmail(){
-                facebookConnectPlugin.api('/me', function(response) {
+                var uID = $('#userID').text();
+                alert('show Email: ' + uID);
+                facebookConnectPlugin.api(uID, function(response) {
                     if (!response || response.error) {
                         alert('Error occured');
                         alert(response.error);
                         $('#respuesta').text(response.error);
                     } else {
+                        alert(JSON.stringify(response));
                         $('#respuesta').text(response);
                     }
                 });
